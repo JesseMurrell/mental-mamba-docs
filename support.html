@@ -1,0 +1,364 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Mental Mamba</title>
+    <meta name="description" content="Get help with Mental Mamba snake math game. Contact support, find FAQs, and troubleshooting guides.">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .support-page {
+            padding: 6rem 2rem 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .support-page h1 {
+            color: var(--accent-green);
+            margin-bottom: 2rem;
+            text-align: center;
+            text-shadow: var(--glow-green);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+        .back-link:hover {
+            text-shadow: var(--glow-green);
+        }
+        .support-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .support-card {
+            background: rgba(31, 177, 0, 0.05);
+            border: 1px solid var(--accent-green);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+        .support-card:hover {
+            box-shadow: var(--glow-green);
+        }
+        .support-card h2 {
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .support-card .icon {
+            font-size: 1.5rem;
+            filter: drop-shadow(var(--glow-green));
+        }
+        .faq-section {
+            margin-top: 3rem;
+        }
+        .faq-item {
+            background: rgba(31, 177, 0, 0.03);
+            border: 1px solid rgba(31, 177, 0, 0.3);
+            border-radius: var(--border-radius);
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        .faq-question {
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--accent-green);
+            transition: var(--transition);
+            user-select: none;
+        }
+        .faq-question:hover {
+            background: rgba(31, 177, 0, 0.1);
+        }
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-secondary);
+            display: none;
+        }
+        .faq-answer.active {
+            display: block;
+        }
+        .contact-form {
+            background: rgba(31, 177, 0, 0.05);
+            border: 1px solid var(--accent-green);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .contact-form h2 {
+            color: var(--accent-green);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--accent-green);
+            border-radius: var(--border-radius);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            box-shadow: var(--glow-green);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: var(--accent-green);
+            color: var(--bg-primary);
+            border: none;
+            border-radius: var(--border-radius);
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--glow-green);
+        }
+        .submit-btn:hover {
+            box-shadow: var(--glow-green-strong);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo">🐍</span>
+                <span class="brand-text">Mental Mamba</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#features" class="nav-link">Features</a></li>
+                <li><a href="index.html#download" class="nav-link">Download</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="support-page">
+        <a href="index.html" class="back-link">← Back to Home</a>
+        
+        <h1>Support Center</h1>
+        
+        <div class="support-sections">
+            <div class="support-card">
+                <h2><span class="icon">📧</span> Contact Support</h2>
+                <p>Need help? Our support team is here to assist you with any questions or issues.</p>
+                <p><strong>Email:</strong> support@mentalmamba.com</p>
+                <p><strong>Response Time:</strong> Within 24-48 hours</p>
+            </div>
+            
+            <div class="support-card">
+                <h2><span class="icon">🐛</span> Report a Bug</h2>
+                <p>Found a bug or technical issue? Let us know so we can fix it quickly.</p>
+                <p><strong>Email:</strong> bugs@mentalmamba.com</p>
+                <p>Please include device info and steps to reproduce the issue.</p>
+            </div>
+            
+            <div class="support-card">
+                <h2><span class="icon">💡</span> Feature Requests</h2>
+                <p>Have an idea for a new feature? We'd love to hear your suggestions!</p>
+                <p><strong>Email:</strong> feedback@mentalmamba.com</p>
+                <p>Help us make Mental Mamba even better.</p>
+            </div>
+            
+            <div class="support-card">
+                <h2><span class="icon">🏆</span> Leaderboard Issues</h2>
+                <p>Problems with scores, rankings, or achievements? We can help restore your progress.</p>
+                <p><strong>Email:</strong> support@mentalmamba.com</p>
+                <p>Include your username and description of the issue.</p>
+            </div>
+        </div>
+
+        <section class="faq-section">
+            <h2 style="color: var(--accent-green); text-align: center; margin-bottom: 2rem; text-shadow: var(--glow-green);">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I play Mental Mamba?</div>
+                <div class="faq-answer">
+                    Mental Mamba combines classic Snake gameplay with math challenges. Control your snake to eat food by solving math problems correctly. Wrong answers will cost you a life! Use swipe gestures to control direction.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What happens when I lose all my hearts?</div>
+                <div class="faq-answer">
+                    When you lose all hearts, the game ends and your score is submitted to the leaderboard. Hearts regenerate over time, or you can earn them through achievements and daily bonuses.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do I create an account?</div>
+                <div class="faq-answer">
+                    Open the app and tap "Sign Up" on the main menu. You can create an account with your email or sign in with Apple/Google. Having an account lets you save progress and compete on leaderboards.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Can I play offline?</div>
+                <div class="faq-answer">
+                    Yes! Mental Mamba can be played offline. However, you'll need an internet connection to sync your progress, access leaderboards, and earn some achievements.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">How do difficulty levels work?</div>
+                <div class="faq-answer">
+                    Choose from Easy, Medium, and Hard difficulty levels. Higher difficulties feature more complex math problems, faster snake speed, and better score multipliers.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is Mental Mamba free to play?</div>
+                <div class="faq-answer">
+                    Yes! Mental Mamba is free to download and play. The game includes optional ads to support development. You can remove ads with a one-time purchase.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">My progress was lost. Can you help?</div>
+                <div class="faq-answer">
+                    If you were logged in to your account, your progress should sync automatically. Try logging out and back in. If the issue persists, contact support with your username and device info.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">When will Android version be available?</div>
+                <div class="faq-answer">
+                    We're actively working on the Android version! Follow us on social media or check back here for updates on the release date.
+                </div>
+            </div>
+        </section>
+
+        <div class="contact-form">
+            <h2>Contact Us Directly</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Please describe your issue or question in detail..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message 📧</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mental Mamba</h3>
+                    <p>The ultimate snake math game that challenges your mind and reflexes.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mental Mamba. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // FAQ toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const isActive = answer.classList.contains('active');
+                    
+                    // Close all other answers
+                    document.querySelectorAll('.faq-answer').forEach(a => {
+                        a.classList.remove('active');
+                    });
+                    
+                    // Toggle current answer
+                    if (!isActive) {
+                        answer.classList.add('active');
+                    }
+                });
+            });
+            
+            // Contact form submission
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(contactForm);
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+                
+                // Create mailto link
+                const mailtoLink = `mailto:support@mentalmamba.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}
+Email: ${email}
+
+Message:
+${message}`)}`;
+                
+                // Open email client
+                window.location.href = mailtoLink;
+                
+                // Show confirmation
+                alert('Thank you for contacting us! Your default email client should open with your message pre-filled.');
+                
+                // Reset form
+                contactForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>

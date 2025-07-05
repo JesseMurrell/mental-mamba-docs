@@ -1,313 +1,172 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mental Mamba - Snake Math Game | Official Website</title>
-    <meta name="description" content="Challenge your mind with Mental Mamba - the snake game that tests your math skills. Download now on iOS and compete on global leaderboards.">
-    <meta name="keywords" content="snake game, math game, educational game, mobile game, iOS game">
+    <meta name="description" content="Challenge your mind with Mental Mamba - the snake game that tests your math skills. Download now on iOS. Android coming soon.">
+    <meta name="keywords" content="snake game, math game, educational game, mobile game, mental mamba, brain training">
+    <meta name="author" content="Mental Mamba Team">
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Courier New', monospace;
-            background-color: #000000;
-            color: #FFFFFF;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-            position: relative;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 20%, rgba(31, 177, 0, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(31, 177, 0, 0.1) 0%, transparent 50%);
-            pointer-events: none;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-        
-        .logo {
-            width: 120px;
-            height: 120px;
-            background: #1FB100;
-            border-radius: 20px;
-            margin: 0 auto 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 48px;
-            font-weight: bold;
-            color: #000000;
-            box-shadow: 0 0 30px rgba(31, 177, 0, 0.5);
-        }
-        
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            color: #1FB100;
-            text-shadow: 0 0 20px rgba(31, 177, 0, 0.5);
-            letter-spacing: 2px;
-        }
-        
-        .hero .tagline {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            color: #FFFFFF;
-        }
-        
-        .hero .description {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
-            color: #CCCCCC;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .download-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 50px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #1FB100;
-            color: #000000;
-            text-decoration: none;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            border: 2px solid #1FB100;
-        }
-        
-        .btn:hover {
-            background: transparent;
-            color: #1FB100;
-            box-shadow: 0 0 20px rgba(31, 177, 0, 0.5);
-        }
-        
-        .btn-coming-soon {
-            background: #333333;
-            color: #CCCCCC;
-            border-color: #333333;
-            cursor: not-allowed;
-        }
-        
-        .btn-coming-soon:hover {
-            background: #333333;
-            color: #CCCCCC;
-            box-shadow: none;
-        }
-        
-        /* Features Section */
-        .features {
-            padding: 80px 0;
-            background: #1a1a1a;
-        }
-        
-        .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: #1FB100;
-        }
-        
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature-card {
-            background: #000000;
-            padding: 30px;
-            border-radius: 15px;
-            border: 2px solid #1FB100;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(31, 177, 0, 0.3);
-        }
-        
-        .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        
-        .feature-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #1FB100;
-        }
-        
-        .feature-card p {
-            color: #CCCCCC;
-        }
-        
-        /* Footer */
-        .footer {
-            background: #000000;
-            padding: 40px 0;
-            text-align: center;
-            border-top: 2px solid #1FB100;
-        }
-        
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .footer-links a {
-            color: #1FB100;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: #FFFFFF;
-        }
-        
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero .tagline {
-                font-size: 1.2rem;
-            }
-            
-            .hero .description {
-                font-size: 1rem;
-            }
-            
-            .download-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Mental Mamba - Snake Math Game">
+    <meta property="og:description" content="Challenge your mind with Mental Mamba - the snake game that tests your math skills.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mentalmamba.github.io">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mental Mamba - Snake Math Game">
+    <meta name="twitter:description" content="Challenge your mind with Mental Mamba - the snake game that tests your math skills.">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="logo">🐍</div>
-            <h1>Mental Mamba</h1>
-            <p class="tagline">Snake Meets Math - Challenge Your Mind</p>
-            <p class="description">
-                Navigate the classic Snake game while solving mathematical challenges. 
-                Grow your snake, test your math skills, and compete on global leaderboards.
-            </p>
-            
-            <div class="download-buttons">
-                <a href="#" class="btn">📱 Download on iOS</a>
-                <a href="#" class="btn btn-coming-soon">🤖 Android Coming Soon</a>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <span class="logo">🐍</span>
+                <span class="brand-text">Mental Mamba</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#download" class="nav-link">Download</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
-    </section>
-    
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>Game Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🐍</div>
-                    <h3>Classic Snake Gameplay</h3>
-                    <p>Experience the timeless Snake game mechanics with smooth controls and responsive gameplay.</p>
+    </nav>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="snake-icon">🐍</span>
+                        Mental Mamba
+                    </h1>
+                    <h2 class="hero-subtitle">Snake Meets Math - Challenge Your Mind</h2>
+                    <p class="hero-description">
+                        The classic snake game evolved! Solve math problems to grow your snake, 
+                        compete on global leaderboards, and train your brain while having fun.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#download" class="btn btn-primary">Download Now 🎮</a>
+                        <a href="#features" class="btn btn-secondary">Learn More 🧠</a>
+                    </div>
                 </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h3>Mathematical Challenges</h3>
-                    <p>Solve math problems to eat food and grow your snake. Multiple difficulty levels for all skill levels.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">❤️</div>
-                    <h3>Lives System</h3>
-                    <p>Heart-based lives system adds strategy - make mistakes and lose hearts, but keep playing!</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
-                    <h3>Global Leaderboards</h3>
-                    <p>Compete with players worldwide and climb the rankings with your math and snake skills.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">🎮</div>
-                    <h3>Customizable Settings</h3>
-                    <p>Adjust difficulty, game speed, and other settings to create your perfect gaming experience.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="feature-icon">👤</div>
-                    <h3>User Accounts</h3>
-                    <p>Create an account to save your progress, track stats, and compete on leaderboards.</p>
+                <div class="hero-visual">
+                    <div class="game-preview">
+                        <div class="screen">
+                            <div class="snake-demo">
+                                <div class="snake-segment head"></div>
+                                <div class="snake-segment"></div>
+                                <div class="snake-segment"></div>
+                                <div class="food">🍎</div>
+                                <div class="math-problem">5 + 3 = ?</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <h2 class="section-title">Game Features</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🐍</div>
+                        <h3>Classic Snake Mechanics</h3>
+                        <p>Experience the beloved snake gameplay with smooth controls and nostalgic feel</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧠</div>
+                        <h3>Mathematical Challenges</h3>
+                        <p>Solve math problems to eat food and grow your snake. Train your brain while playing!</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">❤️</div>
+                        <h3>Heart-Based Lives</h3>
+                        <p>Strategic gameplay with a lives system that adds tension and replay value</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Global Leaderboards</h3>
+                        <p>Compete with players worldwide and climb the ranks to become the ultimate Mental Mamba</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Difficulty Settings</h3>
+                        <p>Customize your experience with multiple difficulty levels for all skill ranges</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">👤</div>
+                        <h3>User Accounts</h3>
+                        <p>Create your profile, track progress, and sync your achievements across devices</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download" class="download">
+            <div class="container">
+                <h2 class="section-title">Download Mental Mamba</h2>
+                <p class="download-description">Available now on iOS, with Android coming soon!</p>
+                <div class="download-buttons">
+                    <a href="#" class="download-btn ios-btn">
+                        <span class="btn-icon">📱</span>
+                        <div class="btn-text">
+                            <small>Download on the</small>
+                            <strong>App Store</strong>
+                        </div>
+                    </a>
+                    <div class="download-btn android-btn disabled">
+                        <span class="btn-icon">🤖</span>
+                        <div class="btn-text">
+                            <small>Coming Soon to</small>
+                            <strong>Google Play</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
-            <div class="footer-links">
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms-of-service.html">Terms of Service</a>
-                <a href="support.html">Support</a>
-                <a href="mailto:support@mentalmamba.com">Contact</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mental Mamba</h3>
+                    <p>The ultimate snake math game that challenges your mind and reflexes.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: support@mentalmamba.com</p>
+                    <p>For business inquiries and support</p>
+                </div>
             </div>
-            <p>&copy; 2024 Mental Mamba. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mental Mamba. All rights reserved.</p>
+            </div>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
-</html> 
+</html>
