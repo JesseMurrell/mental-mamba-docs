@@ -121,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
     - Heart-based lives system
     - Multiple difficulty levels
     
-    Contact: support@mentalmamba.com
+    Contact: support.mentalmamba@australa.co
     `);
 });
 
