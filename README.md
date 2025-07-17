@@ -1,1 +1,1 @@
-# mental-mamaba-docs
+# mental-mamba-docs
