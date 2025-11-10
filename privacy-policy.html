@@ -96,6 +96,9 @@
             <li><strong>Contact Information:</strong> Email address for account authentication and communication</li>
             <li><strong>User Identifiers:</strong> Unique user ID assigned to your account for identification and data association</li>
             <li><strong>Account Information:</strong> Username and profile preferences</li>
+            <li><strong>Purchase and Subscription Data:</strong> Mental Mamba PLUS subscription status, purchase history, 
+                subscription type (monthly/yearly/lifetime), renewal dates, and product identifiers. Note: Payment card 
+                details are never collected or stored by us - all payment processing is handled securely by Apple</li>
             <li><strong>Usage Data:</strong> Game scores, levels reached, gameplay duration, correct/incorrect answers, 
                 session activity, screen views, and feature interactions</li>
             <li><strong>Game Progress:</strong> High scores, achievements, leaderboard rankings, and statistics</li>
@@ -106,6 +109,7 @@
         <h3>Information Not Linked to Your Identity (Anonymous Usage):</h3>
         <ul>
             <li>Anonymous session identifiers</li>
+            <li>Installation ID (anonymous device identifier for analytics)</li>
             <li>Device type, operating system, and version</li>
             <li>App version and environment information</li>
             <li>General performance metrics and crash data</li>
@@ -124,6 +128,8 @@
             <li><strong>Authentication:</strong> Verify your identity using email-based login with one-time passcodes 
                 (no passwords stored)</li>
             <li><strong>Account Management:</strong> Create and manage your user profile, sync progress across devices</li>
+            <li><strong>Subscription Management:</strong> Process and manage Mental Mamba PLUS subscriptions, verify 
+                subscription status, enable premium features, and link purchases across devices signed into the same account</li>
             <li><strong>Game Features:</strong> Enable leaderboards, track achievements, save high scores, and display 
                 personalized statistics</li>
             <li><strong>Analytics:</strong> Understand how users interact with the app, track feature usage, and measure 
@@ -158,20 +164,45 @@
             AWS provides enterprise-grade security and compliance certifications.
         </p>
         
-        <h3>Google AdMob (Advertising)</h3>
+        <h3>RevenueCat (Subscription Management)</h3>
         <p>
-            Mental Mamba displays advertisements using Google AdMob. AdMob may collect and use information 
-            about your device and app usage to show personalized ads. This includes:
+            We use RevenueCat to manage in-app subscriptions and purchases for Mental Mamba PLUS. When you 
+            purchase or manage a subscription, RevenueCat processes:
         </p>
         <ul>
-            <li>Device identifiers</li>
+            <li>Purchase transaction data from Apple's App Store</li>
+            <li>Subscription status and entitlements</li>
+            <li>User identifier (to link purchases across devices)</li>
+            <li>Product identifiers and pricing information</li>
+        </ul>
+        <p>
+            RevenueCat does not have access to your payment information - all payment processing is handled 
+            securely by Apple. RevenueCat only receives confirmation of successful purchases from Apple's servers.
+        </p>
+        <p>
+            For authenticated users, your subscription is linked to your user ID to enable cross-device 
+            subscription access. RevenueCat's privacy practices are governed by their 
+            <a href="https://www.revenuecat.com/privacy" target="_blank" style="color: var(--accent-green);">Privacy Policy</a>.
+        </p>
+        
+        <h3>Google AdMob (Advertising)</h3>
+        <p>
+            Mental Mamba displays advertisements using Google AdMob in the free tier. AdMob may collect and use 
+            information about your device and app usage to show personalized ads. This includes:
+        </p>
+        <ul>
+            <li>Device identifiers (advertising ID)</li>
             <li>App usage data</li>
             <li>Ad interaction data</li>
             <li>Location information (if permitted)</li>
         </ul>
         <p>
+            <strong>Mental Mamba PLUS subscribers do not see ads</strong> and AdMob does not collect data 
+            for active subscribers.
+        </p>
+        <p>
             You can opt out of personalized advertising by adjusting your device's advertising settings 
-            (iOS: Settings → Privacy → Advertising → Limit Ad Tracking).
+            (iOS: Settings → Privacy & Security → Apple Advertising → Personalized Ads).
         </p>
         
         <h3>Apple Game Center (iOS Only)</h3>
@@ -185,7 +216,11 @@
         <p>We do not sell your personal information. We may share your information in the following circumstances:</p>
         <ul>
             <li><strong>Service Providers:</strong> With AWS for hosting, authentication, and backend services; 
-                with Google AdMob for advertising; with Apple for Game Center features (iOS only)</li>
+                with RevenueCat for subscription and purchase management; with Google AdMob for advertising 
+                (free tier only); with Apple for App Store payments and Game Center features (iOS only)</li>
+            <li><strong>Subscription Data:</strong> Your subscription status and purchase history are processed 
+                by RevenueCat and Apple's App Store. We receive confirmation of active subscriptions but do not 
+                have access to payment card details</li>
             <li><strong>Public Leaderboards:</strong> Your username and game scores are publicly visible on leaderboards 
                 (email addresses are never displayed publicly)</li>
             <li><strong>With Your Consent:</strong> When you explicitly authorize us to share your information</li>
