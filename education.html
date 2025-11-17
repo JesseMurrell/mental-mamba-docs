@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - Mental Mamba</title>
+    <meta name="description" content="Contact Mental Mamba for educational institution inquiries and partnerships.">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .education-page {
+            padding: 8rem 2rem 4rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .education-page h1 {
+            color: var(--accent-green);
+            font-size: 4rem;
+            font-family: 'MatrixtypeDisplay', 'Courier New', monospace;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .education-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .education-intro h2 {
+            color: var(--accent-green);
+            font-family: 'MatrixtypeDisplay', 'Courier New', monospace;
+            font-weight: normal;
+            font-size: 2.5rem;
+            letter-spacing: 0.03em;
+            margin-bottom: 1.5rem;
+        }
+        .education-intro p {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.01em;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .education-benefits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        @media (max-width: 768px) {
+            .education-benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+        .benefit-item {
+            background: rgba(31, 177, 0, 0.05);
+            border: 4px solid #FFFFFF;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .benefit-item h3 {
+            color: var(--accent-green);
+            font-family: 'MatrixtypeDisplay', 'Courier New', monospace;
+            font-weight: normal;
+            font-size: 1.5rem;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.75rem;
+        }
+        .benefit-item p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+        .contact-form {
+            background: rgba(31, 177, 0, 0.05);
+            border: 4px solid #FFFFFF;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        .contact-form h2 {
+            color: var(--accent-green);
+            font-family: 'MatrixtypeDisplay', 'Courier New', monospace;
+            font-weight: normal;
+            font-size: 3rem;
+            letter-spacing: 0.03em;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            font-family: 'Autobusbold', 'Courier New', monospace;
+            font-size: 1.3rem;
+            font-weight: normal;
+            letter-spacing: 0.01em;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            border: 4px solid #FFFFFF;
+            border-radius: 10px;
+            color: var(--text-primary);
+            font-family: 'Autobusbold', 'Courier New', monospace;
+            font-size: 1.3rem;
+            letter-spacing: 0.01em;
+            transition: var(--transition);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            transform: translateY(-2px);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 1rem;
+            background: #FFFFFF;
+            color: var(--bg-primary);
+            border: 4px solid #FFFFFF;
+            border-radius: 10px;
+            font-family: 'Autobusbold', 'Courier New', monospace;
+            font-size: 1.4rem;
+            font-weight: normal;
+            letter-spacing: 0.02em;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">
+                    <img src="images/heart-logo.svg" alt="Mental Mamba Logo" class="hero-logo" style="width: 50px; height: 50px;">
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#features" class="nav-link">Features</a></li>
+                <li><a href="index.html#download" class="nav-link">Download</a></li>
+                <li><a href="support.html" class="nav-link">Support</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="education-page">
+        <h1>Educational Institutions</h1>
+
+        <div class="education-intro">
+            <h2>Empower Your Students with Mental Mamba</h2>
+            <p>
+                Mental Mamba offers tailored solutions for educational institutions looking to enhance their students' 
+                mathematical learning experience. We work directly with schools, universities, and educational 
+                organizations to create customized programs that align with your curriculum and learning objectives.
+            </p>
+            
+            <div class="education-benefits">
+                <div class="benefit-item">
+                    <h3>Organizational Pricing</h3>
+                    <p>Special pricing packages designed specifically for educational institutions. Contact us to discuss volume discounts and flexible payment options that fit your budget.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Bulk Student Access</h3>
+                    <p>Provide Mental Mamba to all your students with our bulk licensing options. Easy deployment and management tools to get your entire institution up and running quickly.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Custom Learning Modules</h3>
+                    <p>Work with our team to create unique learning modules tailored to your curriculum. We can develop specialized content that matches your teaching goals and student needs.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Ad-Free Experience</h3>
+                    <p>Ensure your students have a distraction-free learning environment with our ad-free institutional accounts. Focus on learning without interruptions.</p>
+                </div>
+            </div>
+
+            <p>
+                Ready to bring Mental Mamba to your institution? Fill out the form below and our team will get back to you 
+                to discuss how we can customize a solution that works best for your educational needs.
+            </p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+            <form id="educationForm">
+                <div class="form-group">
+                    <label for="institution">Institution</label>
+                    <input type="text" id="institution" name="institution" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Please describe your inquiry in detail..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message 📧</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Mental Mamba</h3>
+                    <p>The ultimate snake math game that challenges your mind and reflexes.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html">Terms of Service</a></li>
+                        <li><a href="support.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mental Mamba. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Education form submission
+        document.addEventListener('DOMContentLoaded', function() {
+            const educationForm = document.getElementById('educationForm');
+            educationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                // Get form data
+                const formData = new FormData(educationForm);
+                const institution = formData.get('institution');
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const subject = formData.get('subject');
+                const message = formData.get('message');
+
+                // Create mailto link
+                const mailtoLink = `mailto:feedback.mentalmamba@australa.co?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Institution: ${institution}
+Name: ${name}
+Email: ${email}
+
+Message:
+${message}`)}`;
+
+                // Open email client
+                window.location.href = mailtoLink;
+
+                // Show confirmation
+                alert('Thank you for contacting us! Your default email client should open with your message pre-filled.');
+
+                // Reset form
+                educationForm.reset();
+            });
+        });
+    </script>
+</body>
+</html>
+
